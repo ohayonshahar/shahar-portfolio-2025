@@ -1,0 +1,58 @@
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+    direction: rtl; /* כדי לוודא כיווניות מימין לשמאל */
+    text-align: right; /* יישור טקסט לימין */
+}
+
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 1rem 0;
+    text-align: center;
+}
+
+nav ul {
+    padding: 0;
+    list-style: none;
+    text-align: center; /* כדי למרכז את הקישורים בתפריט */
+    background-color: #444;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 20px; /* רווח בין קישורים */
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 15px;
+    display: inline-block;
+}
+
+nav a:hover {
+    background-color: #555;
+}
+
+main {
+    padding: 20px;
+    margin: auto;
+    max-width: 960px; /* רוחב מקסימלי לתוכן הראשי */
+    background-color: #fff;
+    border-radius: 8px; /* פינות מעוגלות */
+    box-shadow: 0 0 10px rgba(0,0,0,0.1); /* צל קל */
+    margin-top: 20px;
+}
+
+footer {
+    text-align: center;
+    padding: 1rem 0;
+    background-color: #333;
+    color: #fff;
+    margin-top: 20px;
+}
