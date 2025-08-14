@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>אוטומציה של פריסת אתר סטטי</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>אוטומציה של פריסת אתר סטטי</h1>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="index.html">דף הבית</a></li>
+            <li><a href="about.html">אודותיי</a></li>
+            <li><a href="projects.html">פרויקטים</a></li>
+            <li><a href="contact.html">צור קשר</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <section id="project-details">
+            <h2>אוטומציה של פריסת אתר אישי באמצעות CI/CD</h2>
+            <p>פרויקט זה נועד להפוך את תהליך הפריסה של האתר האישי שלי לאוטומטי לחלוטין. במקום להעלות קבצים באופן ידני לשרתים, בניתי תהליך עבודה (Workflow) של CI/CD, שמתחיל אוטומטית בכל פעם שמתבצע שינוי בקוד.</p>
+
+            <h3>האתגר</h3>
+            <p>לפני הפרויקט, כל שינוי בקוד דרש התחברות לשרת, מחיקת קבצים ישנים והעלאת קבצים חדשים. תהליך זה היה ארוך, חשוף לטעויות ולא איפשר סביבת פיתוח מהירה.</p>
+
+            <h3>הפתרון</h3>
+            <p>הקמתי צינור (Pipeline) אוטומטי באמצעות GitHub Actions ושירותי AWS. התהליך כלל את השלבים הבאים:</p>
+            <ul>
+                <li><strong>GitHub Repository:</strong> הקוד של האתר נמצא במאגר ב-GitHub.</li>
+                <li><strong>GitHub Actions:</strong> הגדרתי קובץ `deploy.yml` שמשמש כ-Workflow. קובץ זה מופעל אוטומטית בכל פעם שקוד נדחף לענף הראשי (`master`).</li>
+                <li><strong>AWS S3:</strong> יצרתי Bucket ב-S3 לאחסון האתר הסטטי. ה-Bucket הוגדר לאירוח אתרים, ובוצעו בו הגדרות אבטחה ופרמטרים של הפצת תוכן (CDN).</li>
+                <li><strong>AWS IAM:</strong> יצרתי משתמש מוגבל הרשאות ב-AWS עם מפתח גישה (Access Key) וסוד גישה (Secret Access Key), שניתן לו רק הרשאות לפרוס קבצים ל-Bucket הספציפי.</li>
+                <li><strong>Secrets:</strong> מפתחות הגישה של AWS הוגדרו כ-Secrets ב-GitHub Actions, כדי לשמור עליהם באופן מאובטח.</li>
+            </ul>
+
+            <h3>התוצאה</h3>
+            <p>התוצאה היא תהליך פריסה מהיר, מאובטח ואוטומטי. כעת, כל שינוי שאני מבצע בקוד נפרס לאתר תוך שניות, ללא צורך בהתערבות ידנית. הדבר מאפשר לי להמשיך לפתח פרויקטים נוספים ולשפר את האתר שלי בקלות וביעילות.</p>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 שחר אוחיון. כל הזכויות שמורות.</p>
+    </footer>
+</body>
+</html>
